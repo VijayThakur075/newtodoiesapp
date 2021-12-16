@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { setselectedProject } from '../../actions';
 import { useProjectsValue, useSelectedProjectValue } from '../../context';
-import { IndividualProject, InduvisualProject } from './IndividualProject';
+import { IndividualProject, InduvisualProject } from '../IndividualProject';
 
 export const Projects = ({ activeValue = null }) => {
     const [active, setActive] = useState(activeValue);

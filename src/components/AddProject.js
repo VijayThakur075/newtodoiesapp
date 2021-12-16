@@ -22,7 +22,7 @@ export default function AddProject({shouldShow = false}) {
         .add({
           projectId,
           name: projectName,
-          userId: 'admin123',
+          userId: 'admin@',
         })
         .then(() => {
          dispatch( setProjects([...projects]));

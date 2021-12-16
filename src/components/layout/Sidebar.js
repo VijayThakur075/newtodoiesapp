@@ -16,7 +16,7 @@ export const Sidebar = () => {
   // const { setSelectedProject } = useSelectedProjectValue();
   const [active, setActive] = useState('inbox');
   const [showProjects, setShowProjects] = useState(true);
-
+   
   return (
     <div className="sidebar" data-testid="sidebar">
       <ul className="sidebar__generic">

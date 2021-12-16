@@ -1,10 +1,10 @@
 import { useState, useEffect} from "react";
 import {FaTrashAlt} from 'react-icons/fa';
-import { useProjectsValue,useSelectedProjectValue } from "../../context";
-import {firebase} from '../../firebase'
+import { useProjectsValue,useSelectedProjectValue } from "../context";
+import {firebase} from '../firebase'
 import React from 'react'
 import { useDispatch } from "react-redux";
-import { setProjects,setselectedProject } from "../../actions";
+import { setProjects,setselectedProject } from "../actions";
 
 export const IndividualProject =({project})=> {
     const dispatch = useDispatch()
