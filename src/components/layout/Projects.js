@@ -8,8 +8,8 @@ import { IndividualProject, InduvisualProject } from '../IndividualProject';
 export const Projects = ({ activeValue = null }) => {
     const [active, setActive] = useState(activeValue);
     const dispatch = useDispatch();
-    const setSelectedProject  = useSelectedProjectValue();
-    const  projects = useProjectsValue();
+    const setSelectedProject = useSelectedProjectValue();
+    const projects = useProjectsValue();
     console.log("iiiiiiiii", projects);
 
     return (
@@ -28,14 +28,14 @@ export const Projects = ({ activeValue = null }) => {
                         }
                         onKeyDown={() => {
                             setActive(project.projectId);
-                        dispatch(setselectedProject(project.projectId));
+                            dispatch(setselectedProject(project.projectId));
                         }}
 
                         onClick={() => {
                             setActive(project.projectId);
                             dispatch(setselectedProject(project.projectId));
                         }}
-                    ><IndividualProject project={project}/></li>
+                    ><IndividualProject project={project} /></li>
                 ))
             }</div>
 

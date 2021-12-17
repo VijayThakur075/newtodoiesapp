@@ -1,4 +1,4 @@
-import { SET_ARCHIVED, SET_PROJECT, SET_SELECTEDPROJECT } from "../actions";
+import {  SET_SELECTEDPROJECT } from "../actions";
 const initialState = {
     selectedProject : 'INBOX',
    

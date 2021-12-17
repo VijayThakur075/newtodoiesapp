@@ -1,7 +1,7 @@
 import { SET_ARCHIVED } from "../actions";
+
 const initialState = {
-    archived:[],
-   
+    archived:[],   
    }
    
    export default function Archiveds (state = initialState, action) {
