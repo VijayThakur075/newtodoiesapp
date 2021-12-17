@@ -7,6 +7,7 @@ import { generatePushId } from '../helpers'
 import { useProjectsValue, useSelectedProjectValue } from '../context'
 import { firebase } from '../firebase'
 import { setShoeMain, setAddTask } from '../actions'
+import { TaskDate } from './TaskDate'
 
 
 export const AddTask = ({
@@ -25,8 +26,8 @@ export const AddTask = ({
     // const selectedProject = useSelectedProjectValue()
 
     const [taskDate, setTaskDate ] = useState('');
-    const [showtaskdate, setShowTaskDate] = useState('')
-
+    const [showTaskDate, setShowTaskDate] = useState('')
+      console.log('ttttttttt',showTaskDate);
     const addTask = () => {
         const projectId = project || selectedProject;
         let collatedDate = '';
@@ -45,6 +46,7 @@ export const AddTask = ({
                     projectId,
                     task,
                     userId: 'admin@',
+                    date: collatedDate || taskDate
                 })
                 .then(() => {
 
@@ -66,6 +68,11 @@ export const AddTask = ({
                             value={task}
                             onChange={(e) => dispatch(setAddTask(e.target.value))}
                         />
+                        <TaskDate
+            setTaskDate={setTaskDate}
+            showTaskDate={showTaskDate}
+            setShowTaskDate={setShowTaskDate}
+          />
                         <button
                             className="add-task__submit"
                             type="button"
@@ -102,7 +109,9 @@ export const AddTask = ({
                     tabIndex={0}
                 >
                     Add Task
+                   
                 </span>
+                <FaRegCalendarAlt />
             </div>
         </div>
     )
